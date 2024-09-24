@@ -11,18 +11,18 @@ jobs:
   build:
     name: Application Build
     runs-on: ubuntu-latest
-    
+
     steps:
-      -name: Checkout repository
-       uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-      -name: Set up Node.js
-       uses: actions/setup-node@v3
-       with:
-        node-version: '20.16'
-      
-      -name: Install Dependencies
-       run: npm install
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.16'
 
-      -name: Build Application
-       run: npm run build
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Application
+        run: npm run build
